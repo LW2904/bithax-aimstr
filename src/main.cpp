@@ -80,7 +80,7 @@ void adjustStrength()
 	if (GetAsyncKeyState(VK_UP) || GetAsyncKeyState(VK_DOWN)) {
 		bool up = GetAsyncKeyState(VK_UP);
 	
-		if (validString(getClip())) {
+		if (isValid(getClip())) {
 			double s = getStrength(getClip()) + (up ? 0.2 : -0.2);
 			cout << "new strength:   " << s << endl;
 			setClip(s);
